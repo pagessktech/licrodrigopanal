@@ -52,12 +52,12 @@
         
         :root {
             /* Paleta de Colores */
-            --bg: #0f1722;
-            --accent: #2ECC71;
-            --accent-dark: #25a25a;
-            --text: #FFFFFF;
-            --muted: #9AA3A8;
-            --card-bg: #0b0f13;
+            --bg: #121212;
+            --accent: #4d7c0f;
+            --accent-dark: #365314;
+            --text: #EAEAEA;
+            --muted: #a0a0a0;
+            --card-bg: #1E1E1E;
             --ambient: #EDE2D6;
 
             /* Tipografía */
@@ -392,7 +392,7 @@
             min-height: 400px;
             border-radius: var(--border-radius);
             border: none;
-            filter: grayscale(1) invert(0.9);
+            filter: grayscale(1) invert(1) brightness(0.8) contrast(1.2);
         }
 
         /* FAQ Section */
@@ -657,12 +657,12 @@
             <ul class="nav-links">
                 <li><a href="#about">Sobre mí</a></li>
                 <li><a href="#services">Servicios</a></li>
-                <li><a href="#testimonials">Testimonios</a></li>
                 <li><a href="#faq">Preguntas</a></li>
                 <li><a href="#contact">Contacto</a></li>
             </ul>
             <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
-                <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                 <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
             </button>
         </nav>
@@ -762,33 +762,6 @@
             </div>
         </section>
         
-        <!-- ======================= TESTIMONIOS ======================= -->
-        <section id="testimonials" class="section">
-            <div class="container scroll-animate">
-                <h2 style="text-align: center;">Qué dicen mis pacientes</h2>
-                <div class="testimonial-carousel">
-                    <div class="testimonial-slider">
-                        <div class="testimonial">
-                            <blockquote>"Gracias al acompañamiento de Rodrigo logré entender y gestionar mis emociones como nunca antes. Un profesional increíble."</blockquote>
-                            <cite class="testimonial-author">- M.G., 34 años (Terapia Individual)</cite>
-                        </div>
-                        <div class="testimonial">
-                            <blockquote>"El proceso de psicodiagnóstico fue claro y revelador. Me ayudó a comprender muchas cosas sobre mí mismo. Totalmente recomendado."</blockquote>
-                            <cite class="testimonial-author">- J.P., 28 años (Psicodiagnóstico)</cite>
-                        </div>
-                         <div class="testimonial">
-                            <blockquote>"Un espacio de absoluta confianza y profesionalismo. Cada sesión es un paso adelante. Agradecida por la calidez y la guía."</blockquote>
-                            <cite class="testimonial-author">- A.L., 42 años (Terapia Individual)</cite>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-controls">
-                    <button class="carousel-btn prev" aria-label="Testimonio anterior">←</button>
-                    <button class="carousel-btn next" aria-label="Testimonio siguiente">→</button>
-                </div>
-            </div>
-        </section>
-
         <!-- ======================= PREGUNTAS FRECUENTES (FAQ) ======================= -->
         <section id="faq" class="section">
             <div class="container">
@@ -1016,32 +989,7 @@
         }
 
 
-        // 3. Carousel de Testimonios
-        const slider = document.querySelector('.testimonial-slider');
-        const testimonials = document.querySelectorAll('.testimonial');
-        const nextBtn = document.querySelector('.carousel-btn.next');
-        const prevBtn = document.querySelector('.carousel-btn.prev');
-        let currentIndex = 0;
-
-        function updateCarousel() {
-            if(slider) {
-                slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-            }
-        }
-
-        if(nextBtn && prevBtn && slider && testimonials.length > 0) {
-            nextBtn.addEventListener('click', () => {
-                currentIndex = (currentIndex + 1) % testimonials.length;
-                updateCarousel();
-            });
-
-            prevBtn.addEventListener('click', () => {
-                currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
-                updateCarousel();
-            });
-        }
-        
-        // 4. Mobile Menu Toggle
+        // 3. Mobile Menu Toggle
         const menuToggle = document.querySelector('.menu-toggle');
         const navLinks = document.querySelector('.nav-links');
 
@@ -1068,7 +1016,7 @@
             });
         }
 
-        // 5. Año dinámico en el footer
+        // 4. Año dinámico en el footer
         const yearSpan = document.getElementById('year');
         if (yearSpan) {
             yearSpan.textContent = new Date().getFullYear();
@@ -1078,6 +1026,10 @@
     </script>
 </body>
 </html>
+
+
+
+
 
 
 
