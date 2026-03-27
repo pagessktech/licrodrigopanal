@@ -464,6 +464,29 @@
             width: 100%;
         }
 
+        /* ======================= PUBLICACIONES ======================= */
+        .publication-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-lg);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+            max-width: 800px;
+            margin: 0 auto;
+            border-left: 4px solid var(--accent);
+        }
+        .publication-card h3 {
+            color: var(--accent);
+            margin-bottom: var(--spacing-sm);
+            font-size: 1.5rem;
+        }
+        .publication-card p {
+            color: var(--text);
+            margin-bottom: var(--spacing-md);
+        }
+        .publication-cta {
+            margin-top: var(--spacing-md);
+        }
+
         /* ======================= FAQ ======================= */
         .faq-item {
             border-bottom: 1px solid var(--card-bg);
@@ -642,6 +665,7 @@
                 <ul class="nav-links">
                     <li><a href="#about">Sobre mí</a></li>
                     <li><a href="#services">Servicios</a></li>
+                    <li><a href="#publications">Publicaciones</a></li>
                     <li><a href="#faq">Preguntas</a></li>
                     <li><a href="#contact">Contacto</a></li>
                 </ul>
@@ -657,6 +681,7 @@
         <ul>
             <li><a href="#about">Sobre mí</a></li>
             <li><a href="#services">Servicios</a></li>
+            <li><a href="#publications">Publicaciones</a></li>
             <li><a href="#faq">Preguntas</a></li>
             <li><a href="#contact">Contacto</a></li>
         </ul>
@@ -763,6 +788,27 @@
             </div>
         </section>
         
+        <!-- ======================= PUBLICACIONES ======================= -->
+        <section id="publications" class="section">
+            <div class="container">
+                <div class="text-center scroll-animate" style="margin-bottom: var(--spacing-lg);">
+                    <h2>Publicaciones y Materiales</h2>
+                    <p style="color: var(--muted); max-width: 65ch; margin: var(--spacing-sm) auto 0;">Recursos gratuitos de lectura y reflexión para acompañar tu proceso de crecimiento personal y potenciar tu bienestar.</p>
+                </div>
+                <div class="publication-card scroll-animate">
+                    <h3>Realismo que Sana</h3>
+                    <p>Este PDF es una guía de desarrollo personal que propone una mirada realista sobre la vida, las relaciones y el crecimiento individual. A través de reflexiones profundas y directas, invita a cuestionar creencias comunes que generan sufrimiento, como idealizar el amor, la bondad o la naturaleza de las personas, para reemplazarlas por una visión más consciente, madura y estratégica. Su objetivo es ayudarte a vivir con mayor claridad, libertad emocional y criterio propio.</p>
+                    <div class="publication-cta">
+                        <!-- Asegúrate de que el archivo PDF esté en la misma carpeta que tu index.html y se llame exactamente así -->
+                        <a href="Rodrigo Panal - Realismo que sana.pdf" download="Rodrigo Panal - Realismo que sana.pdf" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                            Descargar PDF Gratuito
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- ======================= PREGUNTAS FRECUENTES ======================= -->
         <section id="faq" class="section">
             <div class="container" style="max-width: 800px;">
