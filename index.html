@@ -471,8 +471,11 @@
             padding: var(--spacing-lg);
             box-shadow: 0 8px 30px rgba(0,0,0,0.4);
             max-width: 800px;
-            margin: 0 auto;
+            margin: 0 auto var(--spacing-lg);
             border-left: 4px solid var(--accent);
+        }
+        .publication-card:last-child {
+            margin-bottom: 0;
         }
         .publication-card h3 {
             color: var(--accent);
@@ -795,6 +798,7 @@
                     <h2>Publicaciones y Materiales</h2>
                     <p style="color: var(--muted); max-width: 65ch; margin: var(--spacing-sm) auto 0;">Recursos gratuitos de lectura y reflexión para acompañar tu proceso de crecimiento personal y potenciar tu bienestar.</p>
                 </div>
+                
                 <div class="publication-card scroll-animate">
                     <h3>Realismo que Sana</h3>
                     <p>Este PDF es una guía de desarrollo personal que propone una mirada realista sobre la vida, las relaciones y el crecimiento individual. A través de reflexiones profundas y directas, invita a cuestionar creencias comunes que generan sufrimiento, como idealizar el amor, la bondad o la naturaleza de las personas, para reemplazarlas por una visión más consciente, madura y estratégica. Su objetivo es ayudarte a vivir con mayor claridad, libertad emocional y criterio propio.</p>
@@ -805,6 +809,18 @@
                         </a>
                     </div>
                 </div>
+
+                <div class="publication-card scroll-animate" style="transition-delay: 150ms;">
+                    <h3>Soberanía Mental en la Era Digital</h3>
+                    <p>Un ensayo sobre cómo la era digital captura nuestra atención y debilita la capacidad de pensar con profundidad. Propone recuperar la soberanía mental mediante disciplina, enfoque y prácticas que devuelvan control sobre la propia conciencia.</p>
+                    <div class="publication-cta">
+                        <a href="https://drive.google.com/file/d/1wnKdDer-DLkKemKDrW4P2lT9Tw9OdcnT/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                            Descargar PDF Gratuito
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </section>
 
