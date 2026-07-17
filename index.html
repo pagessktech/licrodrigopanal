@@ -458,10 +458,30 @@
         }
         
         /* ======================= CONSULTORIO ======================= */
-        .office-image-container img {
+        .office-gallery {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-md);
+        }
+
+        @media (min-width: 768px) {
+            .office-gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .office-gallery img {
             border-radius: var(--border-radius);
             box-shadow: 0 8px 30px rgba(0,0,0,0.4);
             width: 100%;
+            height: 100%;
+            object-fit: cover;
+            aspect-ratio: 4/3;
+            transition: transform var(--transition-med);
+        }
+        
+        .office-gallery img:hover {
+            transform: scale(1.02);
         }
 
         /* ======================= PUBLICACIONES ======================= */
@@ -704,7 +724,7 @@
                         </div>
                     </div>
                     <div class="hero-image scroll-animate" style="transition-delay: 150ms;">
-                        <img src="https://res.cloudinary.com/dgyjeotoa/image/upload/v1758976893/FOTO_FINAL_2_ylf1hy.png" alt="Lic. Rodrigo Panal en consulta">
+                        <img src="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1784306631/8bcf6458-496e-48bd-9509-f95b9af645e9_lsuvfb.jpg" alt="Lic. Rodrigo Panal en consulta">
                     </div>
                 </div>
             </div>
@@ -714,7 +734,7 @@
         <section id="about" class="section">
             <div class="container about-content">
                 <div class="about-photo scroll-animate">
-                     <img src="https://res.cloudinary.com/dgyjeotoa/image/upload/v1758976892/FOTO_FINAL_1_yirmfq.jpg" alt="Retrato del Lic. Rodrigo Panal" loading="lazy">
+                     <img src="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1784306952/8ed60cb5-e6e0-4cff-a2d3-53beb5a49d42_r3p8l6.png" alt="Retrato del Lic. Rodrigo Panal" loading="lazy">
                 </div>
                 <div class="about-text scroll-animate">
                     <p>Mi nombre es Rodrigo Panal, soy Licenciado en Psicología. Desde hace más de diez años me dedico al estudio del comportamiento humano.</p>
@@ -785,8 +805,10 @@
                     <h2>Mi Consultorio</h2>
                     <p style="color: var(--muted); max-width: 60ch; margin: var(--spacing-sm) auto 0;">Un espacio seguro y confidencial diseñado para tu bienestar.</p>
                 </div>
-                <div class="office-image-container scroll-animate" style="transition-delay: 150ms;">
-                    <img src="https://res.cloudinary.com/dgyjeotoa/image/upload/v1758976893/FOTO_FINAL_5_kdrxkj.png" alt="Foto del consultorio del Lic. Rodrigo Panal" loading="lazy">
+                <div class="office-gallery scroll-animate" style="transition-delay: 150ms;">
+                    <img src="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1784306632/d4cf26a2-b387-4027-aeec-bc2570838e5c_dijiwk.png" alt="Vista del consultorio 1" loading="lazy">
+                    <img src="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1784306632/16963277-e316-44be-a165-35fae79656b0_afhqgj.png" alt="Vista del consultorio 2" loading="lazy">
+                    <img src="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1784306632/4787d4c8-ed69-4f18-bdb6-9d9922bac3c7_ujiyzh.png" alt="Vista del consultorio 3" loading="lazy">
                 </div>
             </div>
         </section>
@@ -1052,7 +1074,6 @@
 
 </body>
 </html>
-
 
 
 
